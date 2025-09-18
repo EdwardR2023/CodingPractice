@@ -1,3 +1,23 @@
+/*
+Q3 – Y-Shape Majority in a Matrix
+
+Description:
+You’re given an odd-dimensioned 𝑁×𝑁 matrix containing only values 0, 1, or 2. 
+
+A “Y-shape” is defined as:
+
+Left diagonal (from top-left to center),
+Right diagonal (from top-right to center),
+Vertical line down from the center to the bottom.
+
+The task is to identify the most frequent value inside the Y-shape and the most frequent value in the background (everything else). 
+Then, transform the matrix with the minimal changes so that all Y-shape cells have the same value, and all background cells have a the same value different from the Y-shape value.
+
+Constraints: N ≥ 3, always odd.
+
+Key Challenges:
+Correctly identifying Y-shape cells, separating frequency counts, and handling ties. Your implementation also avoids double-counting junction cells.
+ */
 
 import java.util.*;
 

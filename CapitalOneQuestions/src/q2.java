@@ -1,3 +1,15 @@
+/*
+ * Q2 – Highlight Removal Problem
+
+Description:
+You’re given an array of unique positive integers representing “heights.” A “highlight” is an element that is strictly greater than its immediate neighbor(s). 
+Repeatedly find the smallest highlight, remove it, and record it in the result list. 
+Continue this process until only two elements remain, then append the larger and smaller of the final two to the result.
+
+Key Challenges:
+Handling edge cases at the boundaries (first and last elements), maintaining correct removal logic, and ensuring uniqueness while preserving the order of eliminations.
+ */
+
 import java.util.*;
 public class q2 {
 
