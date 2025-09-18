@@ -3,31 +3,30 @@
  */
 import java.util.*;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
-        
-        int Heights[] = {6,7,3,2,4,9,8,1,5};
-        List<Integer> sol = Q2.solution(Heights);
-        System.out.println("\nQ2" + Arrays.toString(Heights) + "\tSolution: " + sol);
+        // Q2 test
+        int[] heights = {6,7,3,2,4,9,8,1,5};
+        List<Integer> highlights = Q2.solution(heights);
+        System.out.println("\nQ2 original: " + Arrays.toString(heights) + "\tQ2 result: " + highlights);
 
-        //only values allowed in the matrix are 0,1,2
-        //NxN matrix where N is always odd
-        int[][]Ymatrix = {
-            {2,1,1},
-            {2,2,2},
-            {2,2,2}
+        // Q3 test
+        int[][] matrix = {
+            {1, 2, 0, 1, 2},
+            {0, 1, 2, 0, 1},
+            {2, 0, 1, 2, 0},
+            {1, 1, 0, 1, 2},
+            {0, 2, 2, 0, 1}
         };
-        //print matrix in a matrix format
-        System.out.println("\nQ3 Matrix:");
-        for(int i = 0; i < Ymatrix.length; i++){
-            System.out.println(Arrays.toString(Ymatrix[i]));
-        }
 
-        Q3 q3sol = new Q3();
-        int[][] result = q3sol.solution(Ymatrix);
-        System.out.println("\nQ3 Solution:");
-        for(int i = 0; i < result.length; i++){
-            System.out.println(Arrays.toString(result[i]));
+
+        Q3 q3 = new Q3();
+        int[][] transformed = q3.solution(matrix);
+
+        System.out.println("\nQ3 original: \t\t transformed:");
+        for (int i = 0; i < matrix.length; i++) {
+            System.out.println(Arrays.toString(matrix[i]) + "\t\t" + Arrays.toString(transformed[i]));
         }
     }
 }
+

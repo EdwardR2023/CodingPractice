@@ -19,14 +19,12 @@ Key Challenges:
 Correctly identifying Y-shape cells, separating frequency counts, and handling ties. Your implementation also avoids double-counting junction cells.
  */
 
-import java.util.*;
 
 public class Q3 {
 
     private int matrixLen;
-    private int[] yFrequency = new int[3];
-    private int[] bkgrdFrequency = new int[3];
-    private List<Integer> numUnavailable = new ArrayList<>();
+    private final int[] yFrequency = new int[3];
+    private final int[] bkgrdFrequency = new int[3];
 
     private boolean inY(int i, int j) {
         //left diagonal 
@@ -124,7 +122,7 @@ public class Q3 {
             }
 
         }
-        System.out.println("Changes made: " + change);
+        System.out.print("\n\n\t\tChanges made: " + change);
 
         return result;
     }
