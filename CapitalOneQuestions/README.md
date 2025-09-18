@@ -1,45 +1,56 @@
+# Practice & Solutions
 
+This repository contains my implementations of coding challenges I encountered or reconstructed from Online Assessments or technical interviews.  
+I use this repo to document interesting or tricky problems that either stumped me at first glance or that I found worth practicing again.  
 
-# CapitalOneQuestions
+---
 
-This repository contains solutions to coding questions from technical interviews and practice sets that stumped me.
+## Problem Descriptions
 
-## Project Structure
+### Q2 – Highlight Removal
+**Description:**  
+Given an array of unique positive integers (heights), repeatedly find the smallest "highlight" and remove it until only two elements remain.  
+- A highlight is an element strictly greater than its immediate neighbor(s).  
+- After each removal, append the removed element to the result list.  
+- When only two elements remain, append the larger one first, then the smaller.  
 
-```
-CapitalOneQuestions/
-├── README.md
-├── lib/                # (Optional) Libraries or dependencies
-├── src/                # Source code directory
-│   ├── main.java       # Main entry point; runs solutions for Q2 and Q3
-│   ├── q2.java         # Solution for Question 2 (array processing)
-│   ├── q3.java         # Solution for Question 3 (matrix transformation)
-└── .vscode/            # VS Code settings
-```
+**Key Points:**  
+- Uniqueness ensures at least one highlight always exists.  
+- Edge cases occur at the first and last positions.  
+- Complexity is `O(n²)` due to repeated scanning and removal.
 
-## How to Run
+---
 
-1. **Compile the Java files:**
-   - Open a terminal in the `src` directory.
-   - Run:
-     ```powershell
-     javac .\main.java
-     ```
-2. **Run the main program:**
-   - Execute:
-     ```powershell
-     java main
-     ```
-## File Descriptions
-- `main.java`: Demonstrates usage of solutions for Q2 and Q3, prints results to console.
-- `q2.java`: Contains logic to process an array of heights and return a specific result list.
-- `q3.java`: Contains logic to process a matrix, identifying and transforming a 'Y' shape within it.
+### Q3 – Y-Shape Majority in a Matrix
+**Description:**  
+Given an odd-dimensioned `n × n` matrix (n ≥ 3) with values in {0, 1, 2}, determine the minimum changes needed to make:  
+- All Y-shape cells have the same value,  
+- All non-Y (background) cells have another uniform value.  
+
+The Y-shape is defined as:  
+- Left diagonal from top-left to the center,  
+- Right diagonal from top-right to the center,  
+- Vertical line down from the center to the bottom.  
+
+**Key Points:**  
+- The matrix center cell is part of the Y and is only counted once.  
+- Count frequencies of values separately for Y-cells and background.  
+- Choose the majority value in each region and compute required changes.  
+- Complexity is `O(n²)` with fixed extra space.
+
+---
 
 ## Notes
-- Requires Java (JDK 8 or higher).
-- `.class` files are generated after compilation.
-- The `lib` folder is currently empty or for future dependencies.
-- VS Code settings are stored in `.vscode/settings.json`.
+- These problems are reconstructed from memory and my understanding of what the problem asked for.  
+- My focus is not just solving, but documenting thought process and edge cases.  
+- Future problems I find interesting or difficult will also be added here.  
 
-## License
-This project is for educational purposes.
+---
+
+## Run Instructions
+Compile and run any problem directly with `javac` and `java`:
+
+
+javac main.java
+java main
+
