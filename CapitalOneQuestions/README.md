@@ -2,7 +2,7 @@
 
 # CapitalOneQuestions
 
-This repository contains solutions to coding questions from technical interviews and practice sets.
+This repository contains solutions to coding questions from technical interviews and practice sets that stumped me.
 
 ## Project Structure
 
