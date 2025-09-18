@@ -11,7 +11,7 @@ Handling edge cases at the boundaries (first and last elements), maintaining cor
  */
 
 import java.util.*;
-public class q2 {
+public class Q2 {
 
     public static List<Integer> solution(int []Heights){
         List<Integer> heightsList = new ArrayList<>();

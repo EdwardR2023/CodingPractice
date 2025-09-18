@@ -21,7 +21,7 @@ Correctly identifying Y-shape cells, separating frequency counts, and handling t
 
 import java.util.*;
 
-public class q3 {
+public class Q3 {
 
     private int matrixLen;
     private int[] yFrequency = new int[3];
